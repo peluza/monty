@@ -1,5 +1,5 @@
-#ifndef __HOLBERTON_H__
-#define __HOLBERTON_H__
+#ifndef __MONTY_H__
+#define __MONTY_H__
 
 #include <stdio.h>
 #include <unistd.h>

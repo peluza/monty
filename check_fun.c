@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "monty.h"
 
 /**
  *check_fun - check of the funtion
