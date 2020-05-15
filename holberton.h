@@ -40,11 +40,14 @@ typedef struct instruction_s
 extern int number;
 
 int main(int argc, char *argv[]);
-void check_fun(unsigned int lineNumber, char str1, stack_t **head);
+void check_fun(unsigned int lineNumber, char *str1, stack_t **heade);
 void push(stack_t **stack, unsigned int line_number);
 void pall(stack_t **stack, unsigned int line_number);
 void free_stack_t(stack_t *stack);
 void free_data_t(char **arguments);
 void free_line(char **entrada);
+stack_t *add_dnodeint(stack_t **head, const int n);
+size_t print_dlistint(const stack_t *h);
+int _isdigit(int c);
 
 #endif
