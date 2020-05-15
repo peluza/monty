@@ -1,5 +1,4 @@
 #include "monty.h"
-
 /**
  * main - main
  *@argc: the number of the chars
@@ -31,8 +30,6 @@ int main(int argc, char *argv[])
 	}
 	while (nread = getline(&line, &len, stream) != EOF)
 	{
-		j = strlen(line);
-		line[j - 1] = '\0';
 		str1 = strtok(line, " \n\t");
 		if (strcmp(str1, "push") == 0)
 		{
@@ -42,17 +39,14 @@ int main(int argc, char *argv[])
 			lineNumber++;
 		}
 		if (str1)
-		{
 			check_fun(lineNumber, str1, &heade);
-		}
 		else
 		{
 			fprintf(stderr, "L<line_number>: unknown instruction %d\n", lineNumber);
 			exit(EXIT_FAILURE);
 		}
 	}
-	free_line(&line);
-	free_stack_t(heade);
+	free_all(&line, heade);
 	fclose(stream);
 	return (EXIT_SUCCESS);
 }
