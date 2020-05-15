@@ -36,14 +36,14 @@ int main(int argc, char *argv[])
 		if (strcmp(str1, "push") == 0)
 		{
 			str2 = strtok(NULL, " \n\t");
-			if(_isdigit(str2) == 0)
+			if (_isdigit(str2) == 0)
 				number = atoi(str2);
 			lineNumber++;
 		}
-		if (str1 != 0)
-			{
-				check_fun(lineNumber, str1, &heade);
-			}
+		if (str1)
+		{
+			check_fun(lineNumber, str1, &heade);
+		}
 	}
 	free_line(&line);
 	free_stack_t(heade);

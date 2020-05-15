@@ -25,5 +25,4 @@ void check_fun(unsigned int lineNumber, char *str1, stack_t **heade)
 			break;
 		}
 	}
-	/*dprintf(STDERR_FILENO, "L %u: unknown instruction <opcode>\n", lineNumber);*/
 }
