@@ -14,7 +14,10 @@ stack_t *add_dnodeint(stack_t **head, const int n)
 		return (0);
 	new =  malloc(sizeof(stack_t));
 	if (new == 0)
-		return (0);
+	{
+		fprintf(stderr, "Error: malloc failed\n");
+		exit(EXIT_FAILURE);
+	}
 	new->n = n;
 	new->next = 0;
 	new->prev = 0;

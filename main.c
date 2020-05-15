@@ -26,6 +26,7 @@ int main(int argc, char *argv[])
 	stream = fopen(argv[1], "r");
 	if (stream == NULL)
 	{
+		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
 	while (nread = getline(&line, &len, stream) != EOF)
@@ -43,6 +44,11 @@ int main(int argc, char *argv[])
 		if (str1)
 		{
 			check_fun(lineNumber, str1, &heade);
+		}
+		else
+		{
+			fprintf(stderr, "L<line_number>: unknown instruction %d\n", lineNumber);
+			exit(EXIT_FAILURE);
 		}
 	}
 	free_line(&line);

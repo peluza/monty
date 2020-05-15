@@ -22,7 +22,6 @@ void check_fun(unsigned int lineNumber, char *str1, stack_t **heade)
 		if (strcmp(fun[i].opcode, str1) == 0)
 		{
 			fun[i].f(heade, lineNumber);
-			break;
 		}
 	}
 }
