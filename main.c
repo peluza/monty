@@ -45,6 +45,7 @@ int main(int argc, char *argv[])
 			fprintf(stderr, "L<line_number>: unknown instruction %d\n", lineNumber);
 			exit(EXIT_FAILURE);
 		}
+		lineNumber++;
 	}
 	free_all(&line, heade);
 	fclose(stream);
