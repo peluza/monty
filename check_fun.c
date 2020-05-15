@@ -1,22 +1,26 @@
 #include "holberton.h"
 
-void (*check_fun(unsigned int lineNumber))(stack_t **, unsigned int)
+/**
+ *check_fun - check of the funtion
+ *@lineNumber: the number oo the line
+ *@str1: string of the compairs elemntes
+ *@heade: this is variable of the struct
+ * Return: Always EXIT_SUCCES
+ */
+void check_fun(unsigned int lineNumber, char str1, stack_t **heade)
 {
-    int i; 
+	int i;
 
 	instruction_t fun[] = {
 		{"push", push},
 		{"pall", pall},
 	};
-    if (data.arguments[0])
-    {
-        for (i = 0; fun[i].opcode; i++)
-        {
-            if (strcmp(fun[i].opcode, data.arguments[0]) == 0)
-                return (fun[i].f);
-        }
-        dprintf(STDERR_FILENO,"L %u: unknown instruction <opcode>\n", lineNumber);
-        exit (EXIT_FAILURE);
-    }
-    return;
+
+	for (i = 0; fun[i].opcode; i++)
+	{
+		if (strcmp(fun[i].opcode, str1) == 0)
+			fun[i].f(*heade, lineNumber);
+	}
+	dprintf(STDERR_FILENO, "L %u: unknown instruction <opcode>\n", lineNumber);
+	exit(EXIT_FAILURE);
 }

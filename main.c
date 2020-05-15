@@ -1,51 +1,58 @@
 #include "holberton.h"
 
-data_t data;
+/**
+ * main - main
+ *@argc: the number of the chars
+ *@argv: the char
+ * Return: Always EXIT_SUCCES
+ */
+int number;
 
 int main(int argc, char *argv[])
 {
+	stack_t **heade;
 	FILE *stream;
-	char *line = NULL, *value, *tocken;
+	char *line = NULL, *str1 = NULL, *str2 = NULL;
 	size_t len = 0;
 	ssize_t nread;
-    int x;
-    stack_t *header = NULL;
-    int lineNumber = 1;
-    
-    data.status = 0;
-    data.arguments = NULL;
-    if (argc != 2) 
-    {
+	int x;
+	int lineNumber = 1;
+
+	if (argc != 2)
+	{
 		fprintf(stderr, "Usage: %s <file>\n", argv[0]);
 		exit(EXIT_FAILURE);
 	}
 	stream = fopen(argv[1], "r");
-	if (stream == NULL) {
-		perror("fopen");
+	if (stream == NULL)
+	{
 		exit(EXIT_FAILURE);
 	}
-	nread = getline(&line, &len, stream);
-    while (nread != -1 && data.status == 0)
-    {
-        tocken = strdup(line);
-        value = strtok(tocken, " \n\t");
-	    x = 0;
-	    while (value != NULL)
-	    {
-            data.arguments[x] = strdup(value);
-		    value = strtok(NULL, " \n\t");
-		    x++;
-	    }
-        if (data.arguments)
-            check_fun(lineNumber)(&header, lineNumber);
-        free_data_t(data.arguments);
-        lineNumber++;
-    }
-    free(line);
-    free_stack_t(header);
-    free(tocken);
+	while (nread = getline(&line, &len, stream) != EOF)
+	{
+		printf("line: %s", line);
+		str1 = strtok(line, " \n\t");
+		str2 = strtok(NULL, " \n\t");
+		printf("date:%s - number:%s\n", str1, str2);
+		if (isdigit(str2) == 0)
+		{
+			dprintf(stderr, "L %d : usage: push integer", lineNumber);
+			exit(EXIT_FAILURE);
+		}
+		else
+		{
+			number = atoi(str2);
+			printf("number: %d", number);
+		}
+		if (str1 != 0)
+		{
+			printf("date: %s", str1);
+			check_fun(lineNumber, str1, heade);
+		}
+		lineNumber++;
+	}
+	free_line(&line);
+	free_stack_t(heade);
 	fclose(stream);
-    if(data.status == EXIT_FAILURE)
-        exit(EXIT_FAILURE);
-    return (EXIT_SUCCESS);
+	return (EXIT_SUCCESS);
 }

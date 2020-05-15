@@ -1,21 +1,21 @@
 #include "holberton.h"
 
 /**
- * free_stack_t - free the memory
- * @head: the lis for the estruct
+ * free_data_t- free the memory
+ * @arguments: the lis for the estruct
  */
 
 void free_data_t(char **arguments)
 {
-    int i = 0;
+	int i = 0;
 
-	if (arguments == NULL)
+	if (!arguments)
 		return;
-	if  (arguments[i]!= NULL)
-    {
-        free(arguments[i]);
-        arguments[i++];
-        free_data_t(arguments);
-    }	
+	while (arguments[i])
+	{
+		free(arguments[i]);
+		arguments[i++] = NULL;
+	}
 	free(arguments);
+	arguments = NULL;
 }
