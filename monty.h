@@ -52,5 +52,7 @@ void free_all(char **entrada, stack_t *stack);
 void pop(stack_t **stack, unsigned int line_number);
 int delete_dnodeint_at_index(stack_t **head, unsigned int index);
 int dlistint_len(const stack_t *h);
+void print_dlisttop(const stack_t *h);
+void pint(stack_t **stack, unsigned int line_number);
 
 #endif

@@ -36,6 +36,11 @@ int main(int argc, char *argv[])
 			str2 = strtok(NULL, " \n\t");
 			if (isdigit((unsigned char)str2) == 0)
 				number = atoi(str2);
+			else
+			{
+				fprintf(stderr, "L%d: usage: push integer\n", lineNumber);
+				exit(EXIT_FAILURE);
+			}
 		}
 		if (str1)
 			check_fun(lineNumber, str1, &heade);
