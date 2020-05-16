@@ -14,6 +14,7 @@ void check_fun(unsigned int lineNumber, char *str1, stack_t **heade)
 	instruction_t fun[] = {
 		{"push", push},
 		{"pall", pall},
+		{"pop", pop},
 		{NULL, NULL},
 	};
 

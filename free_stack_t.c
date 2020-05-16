@@ -7,22 +7,9 @@
 
 void free_stack_t(stack_t *stack)
 {
-	stack_t *fr;
-
-	if (!stack)
+	if (stack == NULL)
 		return;
-	if (stack->prev)
-	{
-		while (stack->prev)
-			stack = stack->prev;
-	}
-	fr = stack->next;
-	while (stack)
-	{
-		free(stack);
-		if (!fr)
-			return;
-		stack = fr;
-		fr = fr->next;
-	}
+	if ((*stack).next != NULL)
+		free_stack_t((*stack).next);
+	free(stack);
 }
