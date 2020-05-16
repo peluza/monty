@@ -34,9 +34,8 @@ int main(int argc, char *argv[])
 		if (strcmp(str1, "push") == 0)
 		{
 			str2 = strtok(NULL, " \n\t");
-			if (_isdigit(str2) == 2)
+			if (isdigit((unsigned char)str2) == 0)
 				number = atoi(str2);
-			lineNumber++;
 		}
 		if (str1)
 			check_fun(lineNumber, str1, &heade);

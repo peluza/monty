@@ -48,7 +48,6 @@ void free_data_t(char **arguments);
 void free_line(char **entrada);
 stack_t *add_dnodeint(stack_t **head, const int n);
 size_t print_dlistint(const stack_t *h);
-int _isdigit(int c);
 void free_all(char **entrada, stack_t *stack);
 void pop(stack_t **stack, unsigned int line_number);
 int delete_dnodeint_at_index(stack_t **head, unsigned int index);
