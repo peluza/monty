@@ -7,6 +7,7 @@
  */
 stack_t *swap_list(stack_t **h, const int n)
 {
+	(void)n;
 	int j = 2, len;
 	stack_t *tmp = *h;
 
@@ -21,4 +22,5 @@ stack_t *swap_list(stack_t **h, const int n)
 	tmp->prev = (*h);
 	(*h)->next = tmp;
 	(*h)->prev = NULL;
+	return (*h);
 }

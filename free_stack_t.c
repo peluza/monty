@@ -9,7 +9,7 @@ void free_stack_t(stack_t *stack)
 {
 	if (stack == NULL)
 		return;
-	if ((*stack).next != NULL)
-		free_stack_t((*stack).next);
+	if (stack->next != NULL)
+		free_stack_t(stack->next);
 	free(stack);
 }

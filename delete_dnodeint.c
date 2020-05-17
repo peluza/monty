@@ -6,7 +6,7 @@
  *@index: position of the nodes
  *Return: the value at delete
  */
-int *delete_dnodeint_at_index(stack_t **head, unsigned int index)
+int delete_dnodeint_at_index(stack_t **head, unsigned int index)
 {
 	stack_t *tmp = *head;
 	unsigned int i = 0, len = 0;

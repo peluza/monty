@@ -7,5 +7,6 @@
  */
 void push(stack_t **stack, unsigned int line_number)
 {
+	(void)line_number;
 	add_dnodeint(stack, number);
 }

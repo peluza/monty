@@ -12,5 +12,5 @@ void pint(stack_t **stack, unsigned int line_number)
         fprintf(stderr, "L%d: can't pint, stack empty", line_number);
         exit(EXIT_FAILURE);
     } 
-    print_dlisttop(*stack);
+    print_dlisttop(*stack, line_number);
 }

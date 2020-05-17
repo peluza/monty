@@ -6,6 +6,7 @@
  */
 stack_t *sum_dlistint(stack_t **stack, const int n)
 {
+        (void)n;
         int j = 2, len;
         stack_t *sum = NULL, *h = *stack;
 
@@ -23,4 +24,5 @@ stack_t *sum_dlistint(stack_t **stack, const int n)
                 sum->n = sum->n + h->n;
                 delete_dnodeint_at_index(stack, 0);
         }
+        return (sum);
 }

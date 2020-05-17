@@ -6,11 +6,12 @@
  *Return:  the name of the nodos
  */
 
-size_t print_dlistint(const stack_t *h)
+int print_dlistint(stack_t **stack)
 {
 	unsigned int nodes = 0;
+	stack_t *h = *stack;
 
-	if (h == 0)
+	if (stack == 0)
 		return (0);
 	while (h != 0)
 	{

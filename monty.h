@@ -49,17 +49,16 @@ void swap(stack_t **stack, unsigned int line_number);
 void add(stack_t **stack, unsigned int line_number);
 void nop(stack_t **stack, unsigned int line_number);
 void free_stack_t(stack_t *stack);
-void free_data_t(char **arguments);
 void free_line(char **entrada);
-void free_all(char **entrada, stack_t *stack);
-void print_dlisttop(const stack_t *h);
+void print_dlisttop(const stack_t *h, unsigned int line_number);
 stack_t *get_dnodeint_at_index(stack_t *head, unsigned int index);
 stack_t *swap_list(stack_t **h, const int n);
 stack_t *add_dnodeint(stack_t **head, const int n);
-size_t print_dlistint(const stack_t *h);
-int *delete_dnodeint_at_index(stack_t **head, unsigned int index);
+int print_dlistint(stack_t **stack);
+int delete_dnodeint_at_index(stack_t **head, unsigned int index);
 int dlistint_len(const stack_t *h);
 stack_t *sum_dlistint(stack_t **stack, const int n);
+int _isalpha(char *c);
 
 
 #endif
