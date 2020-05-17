@@ -20,6 +20,7 @@ void check_fun(unsigned int lineNumber, char *str1, stack_t **heade)
 		{"add", add},
 		{"nop", nop},
 		{"sub", sub},
+		{"mul", mul},
 		{NULL, NULL},
 	};
 

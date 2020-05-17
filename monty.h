@@ -61,5 +61,7 @@ stack_t *sum_dlistint(stack_t **stack, const int n);
 int _isalpha(char *c);
 stack_t *sub_dlistint(stack_t **stack, const int n);
 void sub(stack_t **stack, unsigned int line_number);
+void mul(stack_t **stack, unsigned int line_number);
+stack_t *mul_dlistint(stack_t **stack, const int n);
 
 #endif
