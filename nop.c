@@ -1,11 +1,12 @@
 #include "monty.h"
 /**
- *add - add to list
+ *nop - nop is nothing
  *@stack: this is variable of the struct
  *@line_number: number of the line
  * Return: Always EXIT_SUCCES
  */
-void add(stack_t **stack, unsigned int line_number)
+void nop(stack_t **stack, unsigned int line_number)
 {
-	sum_dlistint(stack, line_number);
+	stack = stack;
+	line_number = line_number;
 }
