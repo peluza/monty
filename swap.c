@@ -5,8 +5,7 @@
  *@line_number: number of the line
  * Return: Always EXIT_SUCCES
  */
-void pop(stack_t **stack, unsigned int line_number)
+void swap(stack_t **stack, unsigned int line_number)
 {
-    line_number = 0;
-    delete_dnodeint_at_index(stack, line_number);
+    swap_list(stack, line_number);
 }

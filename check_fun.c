@@ -16,6 +16,8 @@ void check_fun(unsigned int lineNumber, char *str1, stack_t **heade)
 		{"pall", pall},
 		{"pop", pop},
 		{"pint", pint},
+		{"swap", swap},
+		{"add", add},
 		{NULL, NULL},
 	};
 

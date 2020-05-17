@@ -43,16 +43,21 @@ int main(int argc, char *argv[]);
 void check_fun(unsigned int lineNumber, char *str1, stack_t **heade);
 void push(stack_t **stack, unsigned int line_number);
 void pall(stack_t **stack, unsigned int line_number);
+void pop(stack_t **stack, unsigned int line_number);
+void pint(stack_t **stack, unsigned int line_number);
+void swap(stack_t **stack, unsigned int line_number);
 void free_stack_t(stack_t *stack);
 void free_data_t(char **arguments);
 void free_line(char **entrada);
+void free_all(char **entrada, stack_t *stack);
+void print_dlisttop(const stack_t *h);
+stack_t *get_dnodeint_at_index(stack_t *head, unsigned int index);
+stack_t *swap_list(stack_t **h, const int n);
 stack_t *add_dnodeint(stack_t **head, const int n);
 size_t print_dlistint(const stack_t *h);
-void free_all(char **entrada, stack_t *stack);
-void pop(stack_t **stack, unsigned int line_number);
-int delete_dnodeint_at_index(stack_t **head, unsigned int index);
+int *delete_dnodeint_at_index(stack_t **head, unsigned int index);
 int dlistint_len(const stack_t *h);
-void print_dlisttop(const stack_t *h);
-void pint(stack_t **stack, unsigned int line_number);
+stack_t *sum_dlistint(stack_t **h, const int n);
+void add(stack_t **stack, unsigned int line_number);
 
 #endif
