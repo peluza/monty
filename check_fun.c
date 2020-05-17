@@ -19,6 +19,7 @@ void check_fun(unsigned int lineNumber, char *str1, stack_t **heade)
 		{"swap", swap},
 		{"add", add},
 		{"nop", nop},
+		{"sub", sub},
 		{NULL, NULL},
 	};
 

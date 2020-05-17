@@ -59,6 +59,7 @@ int delete_dnodeint_at_index(stack_t **head, unsigned int index);
 int dlistint_len(const stack_t *h);
 stack_t *sum_dlistint(stack_t **stack, const int n);
 int _isalpha(char *c);
-
+stack_t *sub_dlistint(stack_t **stack, const int n);
+void sub(stack_t **stack, unsigned int line_number);
 
 #endif
