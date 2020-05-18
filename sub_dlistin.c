@@ -7,7 +7,7 @@
 stack_t *sub_dlistint(stack_t **stack, const int n, unsigned int line_number)
 {
         (void)n;
-        int len;
+        unsigned int len;
         stack_t *sub = NULL, *h = *stack;
 
         len = dlistint_len(h);

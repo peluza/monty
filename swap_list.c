@@ -8,7 +8,7 @@
 stack_t *swap_list(stack_t **h, const int n, unsigned int line_number)
 {
 	(void)n;
-	int len;
+	unsigned int len;
 	stack_t *tmp = *h;
 
 	len = dlistint_len(*h);

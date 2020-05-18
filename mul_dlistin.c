@@ -7,7 +7,7 @@
  */
 stack_t *mul_dlistint(stack_t **stack, const int n, unsigned int line_number)
 {
-	int len;
+	unsigned int len;
 	stack_t *mul = NULL, *h = *stack;
 
 	len = dlistint_len(h);
