@@ -6,7 +6,6 @@
  */
 stack_t *sub_dlistint(stack_t **stack, const int n, unsigned int line_number)
 {
-        (void)n;
         unsigned int len;
         stack_t *sub = NULL, *h = *stack;
 
@@ -21,7 +20,7 @@ stack_t *sub_dlistint(stack_t **stack, const int n, unsigned int line_number)
         {
                 sub = h;
                 sub = h->next;
-                sub->n = sub->n - h->n;
+                sub->n = h->n - sub->n;
                 delete_dnodeint_at_index(stack, n, line_number);
         }
         return (sub);
