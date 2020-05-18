@@ -57,7 +57,7 @@ int delete_dnodeint_at_index(stack_t **head, unsigned int index, unsigned int li
  *Return:  the name of the nodos
  */
 
-int dlistint_len(const stack_t *h)
+unsigned int dlistint_len(const stack_t *h)
 {
 	unsigned int nodes = 0;
 
