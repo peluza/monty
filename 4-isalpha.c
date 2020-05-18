@@ -1,10 +1,10 @@
 #include "monty.h"
 
 /**
-* _isalpha - description
-*@c: varibale
-* Return: Always 0 (Success)
-*/
+ * _isalpha - description
+ *@c: varibale
+ * Return: Always 0 (Success)
+ */
 
 int _isalpha(char *c)
 {
