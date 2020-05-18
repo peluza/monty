@@ -5,16 +5,16 @@
  *@n: number of the line
  * Return: Always EXIT_SUCCES
  */
-stack_t *swap_list(stack_t **h, const int n)
+stack_t *swap_list(stack_t **h, const int n, unsigned int line_number)
 {
 	(void)n;
-	int j = 2, len;
+	int len;
 	stack_t *tmp = *h;
 
 	len = dlistint_len(*h);
-	if (len < j)
+	if (len < 2)
 	{
-		fprintf(stderr, "L%u: can't swap, stack too short\n", number);
+		fprintf(stderr, "L%u: can't swap, stack too short\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 	(*h) = (*h)->next;

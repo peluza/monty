@@ -7,5 +7,7 @@
  */
 void sub(stack_t **stack, unsigned int line_number)
 {
-	sub_dlistint(stack, line_number);
+	int n = 0;
+	
+	sub_dlistint(stack, n, line_number);
 }

@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 		if (strcmp(str1, "push") == 0)
 		{
 			str2 = strtok(NULL, " \n\t");
-			if (_isalpha(str2) == 0)
+			if (_isdigit(str2) == 0)
 				number = atoi(str2);
 			else
 			{

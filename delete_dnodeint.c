@@ -6,16 +6,16 @@
  *@index: position of the nodes
  *Return: the value at delete
  */
-int delete_dnodeint_at_index(stack_t **head, unsigned int index)
+int delete_dnodeint_at_index(stack_t **head, unsigned int index, unsigned int line_number)
 {
 	stack_t *tmp = *head;
 	unsigned int i = 0, len = 0;
-	
+
 	if (*head == 0)
 	{
-        fprintf(stderr, "L%d: can't pop an empty stack", index);
-        exit(EXIT_FAILURE);
-    }
+		fprintf(stderr, "L%d: can't pop an empty stack", line_number);
+		exit(EXIT_FAILURE);
+	}
 	if ((*head)->next == 0 && index == 0)
 	{
 		free(*head);

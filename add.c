@@ -7,5 +7,7 @@
  */
 void add(stack_t **stack, unsigned int line_number)
 {
-	sum_dlistint(stack, line_number);
+	int n = 0;
+	
+	sum_dlistint(stack, n, line_number);
 }

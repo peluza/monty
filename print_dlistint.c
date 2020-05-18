@@ -2,7 +2,7 @@
 
 /**
  *print_dlistint - prints all the elemts of the dlistsint_s
- *@h: the lists for the estruct
+ *@stack: the lists for the estruct
  *Return:  the name of the nodos
  */
 

@@ -7,5 +7,7 @@
  */
 void mul(stack_t **stack, unsigned int line_number)
 {
-	mul_dlistint(stack, line_number);
+	int n = 0;
+	
+	mul_dlistint(stack, n, line_number);
 }
