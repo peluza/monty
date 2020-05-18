@@ -2,7 +2,7 @@
 /**
  *swap_list - swap two elements the list
  *@h: this is variable of the struct
- *@n: number of the line
+ *@line_number: number of the line
  * Return: Always EXIT_SUCCES
  */
 stack_t *swap_list(stack_t **h, unsigned int line_number)

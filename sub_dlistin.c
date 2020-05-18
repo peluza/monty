@@ -6,22 +6,22 @@
  */
 stack_t *sub_dlistint(stack_t **stack, const int n, unsigned int line_number)
 {
-        unsigned int len;
-        stack_t *sub = NULL, *h = *stack;
+	unsigned int len;
+	stack_t *sub = NULL, *h = *stack;
 
-        len = dlistint_len(h);
-        if (len < 2)
-        {
-                fprintf(stderr, "L%u: can't sub, stack too short\n", line_number);
-                exit(EXIT_FAILURE);
-        }
+	len = dlistint_len(h);
+	if (len < 2)
+	{
+		fprintf(stderr, "L%u: can't sub, stack too short\n", line_number);
+		exit(EXIT_FAILURE);
+	}
 
-        if (h != NULL)
-        {
-                sub = h;
-                sub = h->next;
-                sub->n = h->n - sub->n;
-                delete_dnodeint_at_index(stack, n, line_number);
-        }
-        return (sub);
+	if (h != NULL)
+	{
+		sub = h;
+		sub = h->next;
+		sub->n = h->n - sub->n;
+		delete_dnodeint_at_index(stack, n, line_number);
+	}
+	return (sub);
 }

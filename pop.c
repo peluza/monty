@@ -7,7 +7,7 @@
  */
 void pop(stack_t **stack, unsigned int line_number)
 {
-    int i = 0;
+	int i = 0;
 
-    delete_dnodeint_at_index(stack, i, line_number);
+	delete_dnodeint_at_index(stack, i, line_number);
 }

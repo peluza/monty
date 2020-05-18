@@ -1,7 +1,9 @@
 #include "monty.h"
 /**
  *sum_dlistint - get the value of the node
- *@head: the chars of the lists
+ *@stack: the chars of the lists
+ *@n: number of the interection
+ *@line_number: number of the line
  *Return: the sum of the value in the head_t
  */
 stack_t *sum_dlistint(stack_t **stack, const int n, unsigned int line_number)
