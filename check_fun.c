@@ -21,14 +21,18 @@ void check_fun(unsigned int lineNumber, char *str1, stack_t **heade)
 		{"nop", nop},
 		{"sub", sub},
 		{"mul", mul},
+		{"div", fun_div},
 		{NULL, NULL},
 	};
 
 	for (i = 0; fun[i].opcode != NULL; i++)
 	{
-		if (strcmp(fun[i].opcode, str1) == 0)
+		if (_strcmp(fun[i].opcode, str1) == 0)
 		{
 			fun[i].f(heade, lineNumber);
+			return;
 		}
 	}
+	fprintf(stderr, "L%d: unknown instruction %s\n", lineNumber, str1); 
+	exit(EXIT_FAILURE);
 }

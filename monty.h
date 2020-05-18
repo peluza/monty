@@ -63,5 +63,8 @@ void sub(stack_t **stack, unsigned int line_number);
 void mul(stack_t **stack, unsigned int line_number);
 stack_t *mul_dlistint(stack_t **stack, const int n, unsigned int line_number);
 int _isdigit(char *c);
+int _strcmp(char *s1, char *s2);
+stack_t *div_dlistint(stack_t **stack, const int n, unsigned int line_number);
+void fun_div(stack_t **stack, unsigned int line_number);
 
 #endif
