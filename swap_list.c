@@ -5,9 +5,8 @@
  *@n: number of the line
  * Return: Always EXIT_SUCCES
  */
-stack_t *swap_list(stack_t **h, const int n, unsigned int line_number)
+stack_t *swap_list(stack_t **h, unsigned int line_number)
 {
-	(void)n;
 	unsigned int len;
 	stack_t *tmp = *h;
 

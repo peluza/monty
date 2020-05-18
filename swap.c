@@ -7,7 +7,5 @@
  */
 void swap(stack_t **stack, unsigned int line_number)
 {
-	int n = 0;
-	
-	swap_list(stack, n, line_number);
+	swap_list(stack, line_number);
 }

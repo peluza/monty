@@ -52,7 +52,7 @@ void free_stack_t(stack_t *stack);
 void free_line(char **entrada);
 void print_dlisttop(const stack_t *h, unsigned int line_number);
 stack_t *get_dnodeint_at_index(stack_t *head, unsigned int index);
-stack_t *swap_list(stack_t **h, const int n, unsigned int line_number);
+stack_t *swap_list(stack_t **h, unsigned int line_number);
 stack_t *add_dnodeint(stack_t **head, const int n);
 int print_dlistint(stack_t **stack);
 int delete_dnodeint_at_index(stack_t **head, unsigned int index, unsigned int line_number);
