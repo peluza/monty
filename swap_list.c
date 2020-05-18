@@ -11,7 +11,7 @@ stack_t *swap_list(stack_t **h, const int n, unsigned int line_number)
 	unsigned int len;
 	stack_t *tmp = *h;
 
-	len = dlistint_len(*h);
+	len = dlistint_len(tmp);
 	if (len < 2)
 	{
 		fprintf(stderr, "L%u: can't swap, stack too short\n", line_number);
